@@ -1,11 +1,8 @@
 import PropTypes from "prop-types";
-import Notification from "../Notification/Notification"
 
 const Statistics = ({ good, neutral, bad, total, positive }) => {
- 
-  
-  return  total ?
-      <section className="Statistics">
+  return (
+    <section className="Statistics">
       <h2>Statistics</h2>
       <ul className="statistics_list">
         <li>
@@ -24,10 +21,9 @@ const Statistics = ({ good, neutral, bad, total, positive }) => {
           <p>Positive feedback: {positive}%</p>
         </li>
       </ul>
-    </section> : <Notification message="No feedback given"/>
-}
-  
-
+    </section>
+  );
+};
 
 Statistics.defaultProps = {
   total: 0,

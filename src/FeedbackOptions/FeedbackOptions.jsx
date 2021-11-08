@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+  console.log(options);
   return (
     <div className="buttonBox">
       {options.map((option, i) => (
@@ -13,8 +14,8 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
 };
 
 FeedbackOptions.propTypes = {
-    options: PropTypes.array,
-    onLeaveFeedback: PropTypes.func
+    options: PropTypes.arrayOf(PropTypes.string).isRequired,
+    onLeaveFeedback: PropTypes.func.isRequired
 }
 
 export default FeedbackOptions;
